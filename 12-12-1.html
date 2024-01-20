@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        var a, b, op , c;
+        a = number (prompt("숫자를 입력하세요"));
+        b = number (prompt("숫자를 입력하세요"));
+        op = number (prompt("연산기로를 입력하세요"));
+
+        switch(op){
+            case "+":
+                c = a + b; 
+                document.write("더하기를 선택하셨습니다. 값은 " + c);
+                break;
+
+            case "-":
+                c = a - b;
+                document.write("빼기를 선택하셨습니다. 값은 " - c);
+                break;
+                
+            case "*":
+                c = a * b;
+                document.write("곱하기 선책하셨습니다. 값은 " * c);
+                 break;
+            case "/":
+                c = a / b, break;
+            case "%":
+                c = a % b, break;
+            default :
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

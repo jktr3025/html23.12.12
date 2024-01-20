@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        var a, b, op, c;
+        a = Number(prompt("숫자를 입력하세요")) 
+        b = Number(prompt("숫자를 입력하세요")) 
+        op = prompt("연산기호를 입력하세요")
+
+        switch (op) {
+            case "+":
+                c = a + b;
+                document.write("더하기를 선택하셨습니다. 값은" + c);
+                break;
+                //그냥 프롬프터로 들어오면 더하기(+)는 ~옆에 붙여달라는 의미로 해석되어서
+                //연산 불가능함
+                //Number() 안에 써서 숫자화 시켜주어야 제대로 연산 가능
+            case "-":
+                c = a - b;
+                document.write("빼기를 선택하셨습니다. 값은" + c);
+                break;
+            case "*":
+                c = a * b;
+                document.write("곱하기를 선택하셨습니다. 값은" + c);
+                break;
+            case "/":
+                c = a / b;
+                document.write("나누기를 선택하셨습니다. 값은" + c);
+                break;
+            case "%":
+                c = a % b;
+                document.write("나머지를 선택하셨습니다. 값은" + c);
+                break;
+            default:
+                document.write("잘 못 누르셨습니다")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

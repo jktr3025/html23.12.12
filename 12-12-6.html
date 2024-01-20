@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        
+        $(function(){
+            $(".slide li").hide();
+            $(".slide li").eq(0).show();
+            var n=0;
+            setInterval(function(){
+                $(".slide li").eq(n).fadeOut()
+                if(n<4){
+                n++;
+            } else{
+                n=0;
+            }
+            $(".slide li").eq(n).fadeIn()
+            console.log("n : ", n)
+            },3000) //setinterval
+
+        }) //jquery
+
+    </script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            
+        }
+        .wrap{
+            width: 100%;
+
+        }
+        .slide{
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 120px auto;
+        }
+        .slide li {
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            left: 0;
+            top: 0;
+            border: 5px solid slateblue;
+        }
+        .slide li a{}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <ul class="slide">
+        <li><a href="#"><img src="img/animal01.png" alt="animal01"></a></li>
+        <li><a href="#"><img src="img/animal02.png" alt="animal02"></a></li>
+        <li><a href="#"><img src="img/animal03.png" alt="animal03"></a></li>
+        <li><a href="#"><img src="img/animal04.png" alt="animal04"></a></li>
+        <li><a href="#"><img src="img/animal05.png" alt="animal05"></a></li>
+    </ul>
+</div>
+</body>
+</html>
